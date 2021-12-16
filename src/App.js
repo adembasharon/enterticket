@@ -1,10 +1,10 @@
 
 import './App.css';
-import Nav from './Componnts/Nav';
+import Slider from './Componnts/Slider';
 function App() {
   return (
     <div>
-    <Nav />
+    <Slider />
     </div>
   );
 }
