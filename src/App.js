@@ -1,10 +1,11 @@
 
 import './App.css';
-import Nav from './Componnts/Nav';
+import Main from './Componnts/Main';
 function App() {
   return (
     <div>
-    <Nav />
+    
+    <Main />
     </div>
   );
 }
