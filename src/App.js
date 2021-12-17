@@ -1,10 +1,10 @@
 
 import './App.css';
-import Slider from './Componnts/Slider';
+import Login from './Componnts/Login';
 function App() {
   return (
     <div>
-    <Slider />
+    <Login />
     </div>
   );
 }
