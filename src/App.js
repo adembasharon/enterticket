@@ -1,10 +1,10 @@
 
 import './App.css';
-import Nav from './Componnts/Nav';
+import Login from './Componnts/Login';
 function App() {
   return (
     <div>
-    <Nav />
+    <Login />
     </div>
   );
 }
