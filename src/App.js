@@ -1,13 +1,16 @@
 
 import './App.css';
 import Main from './Componnts/Main';
+import Show from './Componnts/Shows/Show';
+import Footer from './Componnts/Footer/Footer';
 function App() {
   return (
     <div>
-    
-    <Main />
+    <Show />
+    <Footer />
+    {/* <Main /> */}
     </div>
   );
-}
+};
 
 export default App;

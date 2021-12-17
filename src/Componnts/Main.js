@@ -1,8 +1,8 @@
+import { grey } from "@mui/material/colors"
 import styled from "styled-components"
 
 
 const ImgColor1=styled.div`
-background-color:#E5B37F;
 `
 const ImgColor2=styled.div`
 
@@ -16,6 +16,20 @@ const ImgColor4=styled.div`
 
 
 
+const Viewmore=styled.div`
+display:flex;
+justify-content:center;
+align-items center;
+
+
+
+
+
+`
+
+
+const Button=styled.div`
+`
 
 const Mainbar=styled.div`
 
@@ -40,6 +54,7 @@ justify-content:center;
 margin:5em;
 border:2px solid black;
 padding:1em;
+background-color:#E5B37F;
 
 box-sizing:border-box;
 `
@@ -49,7 +64,7 @@ const Main=()=>{
   return (
    <MainContainer>
        <Eventscard>
-         
+<div>
        <ImgColor1>
 <Imagediv1>
   
@@ -60,16 +75,17 @@ const Main=()=>{
        <p>Venue:Uhuru Gardens</p>
        <p>Day:sunday</p>
        <p>Time:11 a.m-3pm</p>
-
+<Button>
 <button>Buy Ticket</button>
-
+</Button>
 
      </div>
      
 </Imagediv1>
 </ImgColor1>
-
+</div>
 <Imagediv1>
+  <div>
 <ImgColor2>
   <div>
 <img src="/images/music3.jpeg" style={{width:250}}/>
@@ -84,6 +100,7 @@ const Main=()=>{
 
      </div>
      </ImgColor2>
+     </div>
 </Imagediv1> 
 
 
@@ -126,6 +143,14 @@ const Main=()=>{
 
 
        </Eventscard>
+
+       <Viewmore>
+<button  style={{padding:4,padding:1}}>View more</button>
+
+
+       </Viewmore>
+
+
    </MainContainer>
   );
 }
