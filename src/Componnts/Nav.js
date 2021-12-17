@@ -1,31 +1,49 @@
 import React from "react"
-import MenuIcon from '@mui/icons-material/Menu';
 import styled from "styled-components"
 
 
 
 
 const Container=styled.div`
-background-image:url()
 margin:0 auto;
-height:100vh;
-width:100vw;
-
+width:90%;
+margin:.2em 2em;
 
 `
 
 const Navbar=styled.div`
+font-family: 'Playfair Display', serif;
 display:flex;
-background-color:pink;
+font-size:.5rem;
 justify-content:space-between;
+
 `
 const Login=styled.div`
 display:flex;
 gap:2em;
+font-size:1rem;
 align-items:center;
 justify-content:center;
 
 `
+
+const BTN=styled.button`
+padding:.1em 1.5em;
+font-size:1rem;
+border-radius:4px;
+background-color:transparent;
+border:1px solid black;
+display:flex;
+justify-content:center;
+align-items:center;
+
+`
+const Links=styled.a`
+text-decoration:none;
+color:black;
+
+`
+
 
 
 const Nav=()=>{
@@ -33,21 +51,28 @@ const Nav=()=>{
         <Container>
             <Navbar>
             <div>
-<h2>Ticket Sale</h2>
+<h2>ENTicket</h2>
 </div>
 <Login>
+
+<div><BTN><Links href="#">I'm New</Links></BTN></div>
     <div>
-    <h3>Login</h3>
+    <p><Links href="#">Login</Links></p>
     </div>
+    
     <div>
-    <h3>Register</h3>
+    <p><Links href="#">Register</Links></p>
     </div>
+
     <div>
-    <MenuIcon />
+    <p><Links href="#">About Us</Links></p>
     </div>
+    
     </Login>
 </Navbar>
-<p> To all the fun lovers purposes to get your coming event ticket from TiketSasa. TiketSasa we bring fun at your disposal. </p>
+
+
+
         </Container>
     )
 }

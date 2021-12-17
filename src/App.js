@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 
 import './App.css';
+
 import Main from './Componnts/Main';
 import Show from './Componnts/Shows/Show';
 import Footer from './Componnts/Footer/Footer';
@@ -48,6 +49,12 @@ function App() {
     <Footer />
     </Footercontent>
     </Appcontent>
+import Login from './Componnts/Login';
+function App() {
+  return (
+    <div>
+    <Login />
+    </div>
   );
 };
 
