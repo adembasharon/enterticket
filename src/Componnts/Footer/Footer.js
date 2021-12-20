@@ -15,7 +15,7 @@ gap:4em;
 
 `
 const Copy=styled.div`
-
+text-align:center;
 `
 
 const Blogs=styled.div`
@@ -34,7 +34,7 @@ list-style-type:none;
 `
 const Paragraph=styled.div`
 width:20%;
-font-size:2rem;
+font-size:1.5rem;
 `
 
 const Footercontainer=styled.div`
@@ -45,7 +45,13 @@ color:#fff;
 const Social=styled.div`
 display:flex;
 gap:1em;
+align-items:center;
+flex-direction:row;
+flex-direction:flex-end;
 `
+
+
+
 
 const Footer=()=>{
     return(
@@ -84,7 +90,7 @@ const Footer=()=>{
     <li>Blogs</li>
     <li>Help </li>
     <li>FAQ</li>
-    <li>Community</li>
+     <li>Community</li> 
     <li>Shipping</li>
 
 </Ul>
@@ -99,7 +105,7 @@ const Footer=()=>{
    <Ul> <h2>Contact Us </h2></Ul>
     <Phone>
         <div>
-<img src="/images/phonel.svg" width="25"/>
+            <img src="/images/phonel.svg" width="25"/>
 
             </div>
             <div>

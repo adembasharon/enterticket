@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Nav from "./Nav"
+// import Nav from "./Nav" 
 
 
 
@@ -19,14 +19,14 @@ background-size:cover;
 backgroud-position:center center;
 `
 const SliderImageTwo = styled.div`
-background-image:url(/images/musicslide2.jpeg);
+background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(/images/musicslide2.jpeg);
 background-repeat:no repeat;
 height:70vh;
 background-size:cover;
 backgroud-position:center center;
 `
 const SliderImageThree = styled.div`
-background-image:url(/images/musicslide5.jpeg);
+background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(/images/musicslide5.jpeg);
 height:70vh;
 background-repeat:no repeat;
 background-size:cover;
@@ -74,7 +74,7 @@ padding:1em 2em;
 color:white;
 border-radius:5px;
 border:1px solid white;
-background-color:transparent;
+background-color:#131F2A;
 `
 const Links=styled.a`
 text-decoration:none;
@@ -86,7 +86,12 @@ const Paragrap=styled.p`
 font-size:1.6rem;
 font-family: 'Playfair Display', serif;
 text-align:center;
-width:90%;
+width:40%;
+margin:.7em 15em;
+display:flex;
+justify-content:center;
+align-items:center;
+
 `
 
 const Paragraph=styled.p`
@@ -95,9 +100,19 @@ font-size:3rem;
 `
 
 const Slider = () => {
+
+    const [counter, setCounter] = React.useState(43200);
+    React.useEffect(() => {
+      const timer =
+        counter > 0 && setInterval(() => setCounter(counter - 5), 1000);
+      return () => clearInterval(timer);
+    }, [counter]);
+
+
+
     return (
         <>
-        < Nav />
+        {/* < Nav /> */}
         <Slidecontainer>
         <Carouser>
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
@@ -125,7 +140,7 @@ const Slider = () => {
                 <p>DAYS</p>
             </div>
             <div>
-                <p>16</p>
+                <p>5</p>
             </div>
             </Days>
 
@@ -134,7 +149,7 @@ const Slider = () => {
                 <p>HRS</p>
             </div>
             <div>
-                <p>3181</p>
+                <p>120</p>
             </div>
             </Days>
 
@@ -143,7 +158,7 @@ const Slider = () => {
                 <p>MIN</p>
             </div>
             <div>
-                <p>2564</p>
+                <p>7200</p>
             </div>
             </Days>
 
@@ -152,7 +167,7 @@ const Slider = () => {
                 <p>SEC</p>
             </div>
             <div>
-                <p>16754</p>
+                <p>{counter} </p>
             </div>
             </Days>
             </Maindays>

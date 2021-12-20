@@ -1,7 +1,9 @@
+import Footer from './Footer/Footer';
 
 import React from "react";
 import styled from "styled-components"
-import Nav from "./Nav"
+import Nav from "./Nav";
+import {users} from "../users";
 
 
 const Backgroundimg=styled.div`
@@ -9,22 +11,23 @@ margin-top:1em;
 display:flex;
 justify-content:center;
 gap:5em;
-color:#F09225;
+color:black;
 `
 
 
-const BTN=styled.div`
+const Button=styled.div`
 
 border-radius:4px;
-border:1px solid #E8545E;
+border:1px solid black;
 background:color:transparent;
 color:black;
 text-align:center;
+cursor:pointer;
 margin-bottom:2em;
 `
 const Placehold=styled.div`
 border-radius:4px;
-border:1px solid #E8545E;
+border:1px solid black;
 background:color:transparent;
 
 
@@ -47,7 +50,7 @@ margin-top:1.5em;
 display:flex;
 color:black;
 border:none;
-border:1px solid #E8545E;
+border:1px solid black;
 background-color:white;
 `
 const Container=styled.div`
@@ -66,13 +69,35 @@ font-size:1.3rem
 
 const Links=styled.a`
 text-decoration:none;
-color:#F09225;
+color:black;
 font-weight:400;
 font-size:1.3rem
 `
 
+
 const Signup=()=>{
-    return(
+
+    const username=React.createRef();
+
+    const password=React.createRef();
+
+
+    const confirmPassword=React.createRef();
+
+    const email=React.createRef();
+
+    const handleRegister = ()=>{
+        const newUser = {
+            username:username.current.value,
+            password:password.current.value,
+            confirmPassword:confirmPassword.current.value,
+            email:email.current.value
+        }
+users.push(newUser)
+        localStorage.setItem("storedUsers", JSON.stringify(users))
+    }
+
+return(
         <>
 <Nav/>
     
@@ -91,63 +116,53 @@ const Signup=()=>{
 <div>
 <Email>
     <div>
-<label for="email"><Paragraph>User Name</Paragraph></label>
+<label for="email"><Paragraph >User Name</Paragraph></label>
 </div>
 <div>
-<Placehold><input style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
+<Placehold><input ref={username} style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
 </div>
 
 </Email>
 
 <Name>
     <div>
-<label for="id number"><Paragraph>Enter Password</Paragraph></label>
+<label for="id number"><Paragraph >Enter Password</Paragraph></label>
 </div>
 <div>
-<Placehold><input style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
+<Placehold><input ref={password} style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
 </div>
 </Name>
 
 
 <Name>
     <div>
-<label for="id number"><Paragraph>Confirm Password</Paragraph></label>
+<label for="id number"><Paragraph >Confirm Password</Paragraph></label>
 </div>
 <div>
-<Placehold><input style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
+<Placehold><input ref={confirmPassword} style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
 </div>
 </Name>
 
 
 <Name>
     <div>
-<label for="id number"><Paragraph>Enter ID Number</Paragraph></label>
+<label for="id number"><Paragraph >Enter Email Adress</Paragraph></label>
 </div>
 <div>
-<Placehold><input style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
+<Placehold><input ref={email} style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
 </div>
 </Name>
 
 
-
 <div>
-<BTN><Links href="#">SignUp?</Links></BTN>
-</div>
-
-<div>
-<BTN><Links href="#">Submit</Links></BTN>
+<Button onClick={handleRegister}><Links href="#">Submit</Links></Button>
 </div>
 </div>
 </Container>
 </div>
 
-<div>
-<img src="/images/Launch.png" />
-
-</div>
-
 </Backgroundimg>
-        
+        <Footer />
 
            
         </>

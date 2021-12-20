@@ -1,60 +1,55 @@
-import styled from "styled-components"
+ import styled from "styled-components";
+ import './App.css';
+//  import Nav from './Componnts/Nav';
+//  import News from './Componnts/News';
+//  import Select from './Componnts/Select';
+//  import Slider from './Componnts/Slider';
+ import Singup from "./Componnts/Singup"
+// import Login from './Componnts/Login';
+//  import Footer from './Componnts/Footer/Footer';
+//  import Main from "./Componnts/Main";
+//  const Maincontent=styled.div`
+
+//  `
 
 
 
+//  const Showcontainer=styled.div`
+//  display:flex;
+//  flex-direction:row;
+//  flex-wrap:wrap;
+//  width:100%;
 
+//  `
+//  const Footercontent=styled.div`
+//  margin-top:3em;
 
-import './App.css';
+//  `
 
-import Main from './Componnts/Main';
-import Show from './Componnts/Shows/Show';
-import Footer from './Componnts/Footer/Footer';
+//  const Appcontent=styled.div`
 
-const Maincontent=styled.div`
-
-`
-
-
-
-const Showcontainer=styled.div`
-display:flex;
-flex-direction:row;
-flex-wrap:wrap;
-width:100%;
-
-`
-const Footercontent=styled.div`
-margin-top:3em;
-
-`
-
-const Appcontent=styled.div`
-
-`
+//  `
 
 function App() {
   return (
-
-
     
-    <Appcontent>
-<Maincontent>
-  <Main />
-</Maincontent>
+//    <Appcontent>
+//        <Nav/>
+//  <Slider/>
+//  <Select />
+//  <Main/>
+//        <Showcontainer>
+    
+//    </Showcontainer>
+//  <News/>
+//  <Login /> 
+  <Singup/>
 
-      <Showcontainer>
-    <Show />
-    </Showcontainer>
-    <Footercontent>
-    <Footer />
-    </Footercontent>
-    </Appcontent>
-import Login from './Componnts/Login';
-function App() {
-  return (
-    <div>
-    <Login />
-    </div>
+//      <Footercontent>
+//      <Footer />
+//      </Footercontent>
+//      </Appcontent>
+
   );
 };
 

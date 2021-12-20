@@ -51,7 +51,7 @@ display:flex
 flex-direction:row;
 align-items:center;
 justify-content:center;
-margin:5em;
+margin:2em;
 border:2px solid black;
 padding:1em;
 background-color:#E5B37F;
@@ -88,7 +88,7 @@ const Main=()=>{
   <div>
 <ImgColor2>
   <div>
-<img src="/images/music3.jpeg" style={{width:250}}/>
+<img src="/images/music3.jpeg" style={{width:250 ,background:"red"}}/>
 </div>
      <div>
        <p>Venue:Canivour</p>
