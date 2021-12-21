@@ -1,6 +1,8 @@
 import Footer from './Footer/Footer';
+import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
+import ClearIcon from '@mui/icons-material/Clear';
 
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components"
 import Nav from "./Nav";
 import {users} from "../users";
@@ -97,6 +99,25 @@ users.push(newUser)
         localStorage.setItem("storedUsers", JSON.stringify(users))
     }
 
+
+const[confirmFormPassword , setConfirmFormPassword]=useState("")
+const [formPassword , setFormPassword]=useState("")
+
+function onPasswordChange(e) {
+    const passwordValue=e.target.value;
+    setFormPassword(passwordValue);}
+
+    function onPasswordConfirmChange(e) {
+        const passwordValue=e.target.value;
+        setConfirmFormPassword(passwordValue);
+    }
+    
+
+const checkIcon=()=>{
+    if(confirmFormPassword!==""){
+        return formPassword===confirmFormPassword?<CheckOutlinedIcon style={{color:"green"}}/>:<ClearIcon style={{color:"red"}}/>
+    } 
+}
 return(
         <>
 <Nav/>
@@ -129,7 +150,7 @@ return(
 <label for="id number"><Paragraph >Enter Password</Paragraph></label>
 </div>
 <div>
-<Placehold><input ref={password} style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
+<Placehold><input onChange={(e)=>onPasswordChange(e)} ref={password} style={{background:"transparent" ,border:"transparent" ,width:500}} type="password" placeholder="" /></Placehold>
 </div>
 </Name>
 
@@ -137,9 +158,14 @@ return(
 <Name>
     <div>
 <label for="id number"><Paragraph >Confirm Password</Paragraph></label>
+
 </div>
 <div>
-<Placehold><input ref={confirmPassword} style={{background:"transparent" ,border:"transparent" ,width:500}} type="text" placeholder="" /></Placehold>
+<Placehold><input  onChange={(e)=>onPasswordConfirmChange(e)} ref={confirmPassword} style={{background:"transparent" ,border:"transparent" ,width:500}} type="password" placeholder="" /></Placehold>
+<div>
+{checkIcon()}
+</div>
+
 </div>
 </Name>
 
@@ -154,8 +180,8 @@ return(
 </Name>
 
 
-<div>
-<Button onClick={handleRegister}><Links href="#">Submit</Links></Button>
+<div style={{color:"white"}}>
+<button style={{padding:2, marginBottom:6, borderRadius:4 , border:"2pe solid black"}} onClick={handleRegister}><Links href="#">Submit</Links></button>
 </div>
 </div>
 </Container>
@@ -168,6 +194,8 @@ return(
         </>
     )
 }
+
+
 
 
 

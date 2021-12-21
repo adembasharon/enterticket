@@ -1,6 +1,7 @@
 import React from "react"
-import styled from "styled-components"
-// import Nav from "./Nav" 
+import styled from "styled-components";
+import Countdown from './Countdown';
+
 
 
 
@@ -33,55 +34,11 @@ background-size:cover;
 backgroud-position:center center;
 `
 
-const Timer=styled.div`
-display:flex;
-flex-direction:column;
-position:absolute;
-color:white;
-top:50%;
-margin-left:6em;
-left:10;
-transform:translateY(-50%);
-
-
-`
-
-const Days=styled.div`
-display:flex;
-font-family: 'Playfair Display', serif;
-text-align:center;
-flex-direction:column;
-font-weight:900;
-color:####;
-padding:1.4em;
-font-size:4rem
-border-radius:5px;
-border:1px solid white;
-margin:2em 0;
-
-`
-const Maindays=styled.div`
-display:flex;
-gap:2em;
-
-`
 
 const Carouser=styled.div`
 position:relative;
 `
-const Btn=styled.button`
-padding:1em 2em;
-color:white;
-border-radius:5px;
-border:1px solid white;
-background-color:#131F2A;
-`
-const Links=styled.a`
-text-decoration:none;
-color:white;
-font-weight:900;
 
-`
 const Paragrap=styled.p`
 font-size:1.6rem;
 font-family: 'Playfair Display', serif;
@@ -94,25 +51,12 @@ align-items:center;
 
 `
 
-const Paragraph=styled.p`
-font-Weight:600;
-font-size:3rem;
-`
 
 const Slider = () => {
-
-    const [counter, setCounter] = React.useState(43200);
-    React.useEffect(() => {
-      const timer =
-        counter > 0 && setInterval(() => setCounter(counter - 5), 1000);
-      return () => clearInterval(timer);
-    }, [counter]);
-
 
 
     return (
         <>
-        {/* < Nav /> */}
         <Slidecontainer>
         <Carouser>
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
@@ -128,55 +72,9 @@ const Slider = () => {
     </SliderImageThree>
   </div>
 </div>
-
-        <Timer>
-            <div>
-            <Paragraph>Show is Coming !</Paragraph>
-            </div>
-            <div>
-                <Maindays>
-            <Days>
-            <div>
-                <p>DAYS</p>
-            </div>
-            <div>
-                <p>5</p>
-            </div>
-            </Days>
-
-            <Days>
-            <div>
-                <p>HRS</p>
-            </div>
-            <div>
-                <p>120</p>
-            </div>
-            </Days>
-
-            <Days>
-            <div>
-                <p>MIN</p>
-            </div>
-            <div>
-                <p>7200</p>
-            </div>
-            </Days>
-
-            <Days>
-            <div>
-                <p>SEC</p>
-            </div>
-            <div>
-                <p>{counter} </p>
-            </div>
-            </Days>
-            </Maindays>
-            </div>
-            <div>
-            <Btn><Links href="#">Ready To Enjoy ?</Links></Btn>
-            </div>
-        </Timer>
-        </Carouser>
+{/* Timer */}
+       <Countdown/>
+          </Carouser>
         </Slidecontainer>
         <Paragrap>
         <p> To all the fun lovers purposes to get your coming event ticket from Enterticket. Enterticket we bring fun at your disposal. </p>
