@@ -1,6 +1,7 @@
 import Footer from './Footer/Footer';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 import ClearIcon from '@mui/icons-material/Clear';
+import { Link } from "react-router-dom"
 
 import React, {useState} from "react";
 import styled from "styled-components"
@@ -181,7 +182,7 @@ return(
 
 
 <div style={{color:"white"}}>
-<button style={{padding:2, marginBottom:6, borderRadius:4 , border:"2pe solid black"}} onClick={handleRegister}><Links href="#">Submit</Links></button>
+<button style={{padding:2, marginBottom:6, borderRadius:4 , border:"2pe solid black" ,textDecorationColor:"black",textDecoration:"none"}} onClick={handleRegister}><Link to="/Login">Submit</Link></button>
 </div>
 </div>
 </Container>

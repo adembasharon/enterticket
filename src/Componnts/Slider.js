@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components";
 import Countdown from './Countdown';
-
+import { Link } from "react-router-dom"
+import Allshow from "./Allshow"
 
 
 
@@ -77,7 +78,7 @@ const Slider = () => {
           </Carouser>
         </Slidecontainer>
         <Paragrap>
-        <p> To all the fun lovers purposes to get your coming event ticket from Enterticket. Enterticket we bring fun at your disposal. </p>
+        <p> To all the fun lovers purposes to get your coming event ticket from Enterticket. Enterticket we bring fun at your disposal.<Link to="/Allshow">View More Shows...</Link> </p>
         </Paragrap>
         </>
     )
