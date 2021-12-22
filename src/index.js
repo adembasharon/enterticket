@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import HomePage from './Componnts/HomePage';
+import { Login } from '@mui/icons-material';
+
+import {Router,Routes,Route,Link} from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -50,6 +50,12 @@ background-color:#393939;
 color:#fff;
 font-size:1rem;
 
+@media(max-width:768px){
+font-size:.5rem;
+
+
+}
+
 `
 const Social=styled.div`
 display:flex;
@@ -58,6 +64,9 @@ margin:2em;
 align-items:centre;
 justify-content:center;
 `
+
+
+
 
 const Footer=()=>{
     return(
