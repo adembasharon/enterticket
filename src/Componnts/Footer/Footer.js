@@ -13,17 +13,31 @@ justify-content:center;
 align-items:center;
 gap:5em;
 
+
+// Media
+@media(max-width:810px){
+width:100%;
+font-size:1rem;
+
+}
+}
+
 `
 const Copy=styled.div`
 display:flex;
 align-items:center;
 justify-content:center;
+
+
+
 `
 
 
 const Phoneicon=styled.div`
 // color:#fff;
 color:white;
+
+
 `
 const Blogs=styled.div`
 margin-top:1.5em;
@@ -34,6 +48,10 @@ display:flex;
 justify-content:center;
 align-items:center;
 gap:1em;
+
+// Media
+@media(max-width:810px){
+
 `
 const Ul=styled.li`
 font-size:1.2rem;
@@ -43,6 +61,9 @@ const Paragraph=styled.div`
 width:20%;
 font-size:1.7rem;
 margin-top:1em;
+
+
+
 `
 
 const Footercontainer=styled.div`
@@ -63,8 +84,10 @@ gap:2em;
 margin:2em;
 align-items:centre;
 justify-content:center;
-`
 
+
+
+`
 
 
 
