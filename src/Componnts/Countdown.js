@@ -22,9 +22,9 @@ font-family: 'Playfair Display', serif;
 text-align:center;
 flex-direction:column;
 font-weight:900;
-color:####;
+color:white;
 padding:1.4em;
-font-size:4rem
+font-size:4rem;
 border-radius:5px;
 border:1px solid white;
 margin:2em 0;
