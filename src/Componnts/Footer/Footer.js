@@ -11,13 +11,20 @@ font-family:'Playfair Display' , Serif;
 display:flex;
 justify-content:center;
 align-items:center;
-gap:4em;
+gap:5em;
 
 `
 const Copy=styled.div`
-text-align:center;
+display:flex;
+align-items:center;
+justify-content:center;
 `
 
+
+const Phoneicon=styled.div`
+// color:#fff;
+color:white;
+`
 const Blogs=styled.div`
 margin-top:1.5em;
 
@@ -29,25 +36,33 @@ align-items:center;
 gap:1em;
 `
 const Ul=styled.li`
-font-size:2rem;
+font-size:1.2rem;
 list-style-type:none;
 `
 const Paragraph=styled.div`
 width:20%;
-font-size:1.5rem;
+font-size:1.7rem;
+margin-top:1em;
 `
 
 const Footercontainer=styled.div`
 background-color:#393939;
 color:#fff;
+font-size:1rem;
+
+@media(max-width:810px){
+font-size:.5rem;
+flex-wrap:wrap;
+
+}
 
 `
 const Social=styled.div`
 display:flex;
-gap:1em;
-align-items:center;
-flex-direction:row;
-flex-direction:flex-end;
+gap:2em;
+margin:2em;
+align-items:centre;
+justify-content:center;
 `
 
 
@@ -59,7 +74,7 @@ const Footer=()=>{
         <Container>
 
 <Paragraph>
-    <p>GET UPDATES ON CELEBRITIES STUFF YOU PROBABLY WANT TO KNOW ABOUT IN YOUR INBOX.</p>
+    <p>Get Udates On Celebrities Stuffs You Probably Want To Know About In Your Inbox.</p>
 </Paragraph>
 
         <div>
@@ -90,7 +105,7 @@ const Footer=()=>{
     <li>Blogs</li>
     <li>Help </li>
     <li>FAQ</li>
-     <li>Community</li> 
+    
     <li>Shipping</li>
 
 </Ul>
@@ -104,20 +119,20 @@ const Footer=()=>{
 
    <Ul> <h2>Contact Us </h2></Ul>
     <Phone>
-        <div>
-            <img src="/images/phonel.svg" width="25"/>
+        <Phoneicon >
+<img src="/images/phonel.svg"    width="25"/>
 
-            </div>
+            </Phoneicon>
             <div>
     <p>+254 756 908 523</p>
     </div>
     </Phone>
     
     <Phone>
-        <div>
+        <Phoneicon>
 <img src="/images/email.svg" width="25"/>
 
-            </div>
+</Phoneicon>
             <div>
     <p>rosha@gmail.com</p>
     </div>

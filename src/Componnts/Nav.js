@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 
@@ -50,6 +51,7 @@ color:white;
 const Color=styled.div`
 background-color:#131F2A;
 color:white;
+text-decoration:none;
 
 `
 
@@ -84,21 +86,21 @@ const Nav=()=>{
         <Container>
             <NavbarP>
             <div>
-<h2>ENTicket</h2>
+<h2><Link to="/">ENTicket</Link></h2>
 </div>
 <Login>
 
-<div><BTN><Links href="#">I'm New</Links></BTN></div>
+<div><BTN><Link to="/">I'm New</Link></BTN></div>
     <div>
-    <p><Links href="#">Login</Links></p>
+    <p><Link to="/login">Login</Link></p>
     </div>
     
     <div>
-    <p><Links href="#">Register</Links></p>
+    <p><Link to="/Signup">Register</Link></p>
     </div>
 
     <div>
-    <p><Links href="#">About Us</Links></p>
+    <p><Links>About Us</Links></p>
     </div>
     
     </Login>

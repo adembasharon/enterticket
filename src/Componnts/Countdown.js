@@ -11,6 +11,7 @@ top:50%;
 margin-left:6em;
 left:10;
 transform:translateY(-50%);
+font-weight:900;
 
 
 `
@@ -64,7 +65,7 @@ useEffect(()=>{
 
 
     const countdownClock= ()=>{
-    const showDate = new Date('25 Dec 2021');
+    const showDate = new Date('2 Dec 2022');
 
 const todaysDate = new Date();
 
@@ -95,7 +96,7 @@ const seconds = Math.floor(dateDiff/1000);
     return (
         <Timer>
             <div>
-            <Paragraph>Show is Coming !</Paragraph>
+            <Paragraph> The Show is Coming !</Paragraph>
             </div>
             <div>
                 <Maindays>

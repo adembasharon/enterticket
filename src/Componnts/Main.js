@@ -1,25 +1,40 @@
 import { grey } from "@mui/material/colors"
 import styled from "styled-components"
+import { main} from "../data";
+import React from "react";
+import { color } from "@mui/system";
+import { jsPDF } from "jspdf";
+
+const ImageContainer=styled.div`
+
+font-family: 'Playfair Display', serif;
+dislay:flex;
+border:2px solid black;
+margin-left:2em;
+border-radius:10px;
+padding:2em;
+width:25%;
+height:fit-content;
+@media(max-width:810px){
+width:45%;
+margin-bottom:1em;
 
 
-const ImgColor1=styled.div`
+}
+
+
+
+
+
 `
-const ImgColor2=styled.div`
 
-`
-const ImgColor3=styled.div`
-
-`
-const ImgColor4=styled.div`
-
-`
 
 
 
 const Viewmore=styled.div`
 display:flex;
 justify-content:center;
-align-items center;
+text-align:center;
 
 
 
@@ -35,124 +50,91 @@ const Mainbar=styled.div`
 
 
 `
-const MainContainer=styled.div`
 
+
+const Image=styled.div`
+
+height:40%;
+
+`
+
+const MainContainer=styled.div`
+display:flex;
 
 `
 const Eventscard=styled.div`
-display:flex;
-justify-content:flex-end;
+ display:flex;
+ justify-content:flex-end;
 
 
 `
 
-const Imagediv1=styled.div`
-display:flex
-flex-direction:row;
-align-items:center;
-justify-content:center;
-margin:2em;
-border:2px solid black;
-padding:1em;
-background-color:#E5B37F;
-
-box-sizing:border-box;
-`
+const Divcolor=styled.div`
 
 
-const Main=()=>{
-  return (
-   <MainContainer>
-       <Eventscard>
-<div>
-       <ImgColor1>
-<Imagediv1>
+` 
+
+
+
+
+
+
+
+
+
+const Main = () => {
+
+  const receipt=(eventTitle,eventDes,eventTime,eventPrice,eventDay)=>{
+
+    const doc=new jsPDF();
+    doc.text(10,20 , "Welcome to ENTicket");
+    doc.addFont("italic")
+    doc.text(10,45,eventTitle)
+    doc.text(10,60,eventDes)
+    doc.text( 10,75,eventTime)
+    doc.text( 10, 90,eventPrice)
+    doc.text(10,105, eventDay)
+    doc.save("ENTicket.pdf")
+
+
+  }
   
-  <div>
-<img src="/images/music2.jpeg" style={{width:250}}/>
-</div>
-     <div>
-       <p>Venue:Uhuru Gardens</p>
-       <p>Day:sunday</p>
-       <p>Time:11 a.m-3pm</p>
-<Button>
-<button>Buy Ticket</button>
-</Button>
 
-     </div>
-     
-</Imagediv1>
-</ImgColor1>
-</div>
-<Imagediv1>
-  <div>
-<ImgColor2>
-  <div>
-<img src="/images/music3.jpeg" style={{width:250 ,background:"red"}}/>
-</div>
-     <div>
-       <p>Venue:Canivour</p>
-       <p>Day:Tuesday</p>
-       <p>Time:10 a.m - 2pm</p>
+  return( 
+   
+     <> 
+     {  
+    main.map(main=>{
+      return(
 
-<button>Buy Ticket</button>
+        <ImageContainer>
+          <Image>
+<img src={main.img}  width="100%" height="100%" style={{objectFit:"cover"}} key={main.id}/>
+</Image>
+<Divcolor>
+<h2>{main.title}</h2>
+<p>{main.des}</p>
+<p>{main.time}</p>
+<p>{main.day}</p>
+<button onClick={()=>receipt(main.title,main.des,main.time,main.price,main.day)} style={{borderRadius:"4px" , border:"2px solid white",padding:".4em 2em", color:"white", backgroundColor:"#00142B"}}>BUY TICKET</button>
+</Divcolor>
 
 
-     </div>
-     </ImgColor2>
-     </div>
-</Imagediv1> 
+</ImageContainer>  
 
 
 
-<Imagediv1>
-<ImgColor3>
-  <div>
-<img src="/images/music5.jpeg" style={{width:250}}/>
-</div>
-     <div>
-       <p>Venue:City Park</p>
-       <p>Day:Surturday</p>
-       <p>Time:9a.m - 3pm</p>
-
-<button>Buy Ticket</button>
+      )
 
 
-     </div>
-     </ImgColor3>
-</Imagediv1>
+  } )
 
-<Imagediv1>
-<ImgColor4>
-  <div>
-<img src="/images/img4.jpg" style={{width:250 , height:390}}/>
-</div>
-     <div>
-       <p>Venue:City Park</p>
-       <p>Day:Surturday</p>
-       <p>Time:9a.m - 3pm</p>
-
-<button>Buy Ticket</button>
-
-
-     </div>
-     </ImgColor4>
-</Imagediv1>
-
-
-
-
-       </Eventscard>
-
-       <Viewmore>
-<button  style={{padding:4,padding:1}}>View more</button>
-
-
-       </Viewmore>
-
-
-   </MainContainer>
-  );
 }
+ 
+ </>
+ 
+  );
+ 
+};
 
 export default Main;
