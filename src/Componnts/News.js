@@ -26,6 +26,8 @@ const Newsp=styled.div`
  `
  const ShowButton = styled.button`
  padding:.5em 1em;
+ margin:1em 0;
+ color:black;
  `
 
 const News = () => {
@@ -46,7 +48,7 @@ const News = () => {
   return (
     <Newsp>
       <div>
-        <ShowButton> <Link to="/Select">All </Link>Shows</ShowButton>
+        <ShowButton> <Link to="/Select">All shows</Link></ShowButton>
         </div>
       <div>
       <Paragraph><p>For latest shows and events register for our newsletter</p></Paragraph>

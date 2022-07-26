@@ -65,7 +65,7 @@ useEffect(()=>{
 
 
     const countdownClock= ()=>{
-    const showDate = new Date('25 Dec 2021');
+    const showDate = new Date('2 Dec 2022');
 
 const todaysDate = new Date();
 

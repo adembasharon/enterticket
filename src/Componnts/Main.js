@@ -13,18 +13,22 @@ border:2px solid black;
 margin-left:2em;
 border-radius:10px;
 padding:2em;
-
-
-// Media
-@media(max-width:768px){
-flex-wrap:wrap;
+width:25%;
+height:fit-content;
+@media(max-width:810px){
+width:45%;
+margin-bottom:1em;
 
 
 }
 
 
 
+
+
 `
+
+
 
 
 const Viewmore=styled.div`
@@ -48,8 +52,9 @@ const Mainbar=styled.div`
 `
 
 
-const Imagecont=styled.div`
+const Image=styled.div`
 
+height:40%;
 
 `
 
@@ -101,21 +106,23 @@ const Main = () => {
      {  
     main.map(main=>{
       return(
-    <div>
+
         <ImageContainer>
-<img src={main.img}  width="250px" key={main.id}/>
+          <Image>
+<img src={main.img}  width="100%" height="100%" style={{objectFit:"cover"}} key={main.id}/>
+</Image>
 <Divcolor>
 <h2>{main.title}</h2>
 <p>{main.des}</p>
 <p>{main.time}</p>
 <p>{main.day}</p>
-<button onClick={()=>receipt(main.title,main.des,main.time,main.price,main.day)} style={{border:4 , borderRadius:"2px solid white",padding:2, color:"white", backgroundColor:"#00142B"}}>BUY TICKET</button>
+<button onClick={()=>receipt(main.title,main.des,main.time,main.price,main.day)} style={{borderRadius:"4px" , border:"2px solid white",padding:".4em 2em", color:"white", backgroundColor:"#00142B"}}>BUY TICKET</button>
 </Divcolor>
 
 
 </ImageContainer>  
 
-</div>
+
 
       )
 

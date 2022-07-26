@@ -1,6 +1,17 @@
 import React, { useState } from "react"
 import {main , shows} from "../data"
 import { Link } from "react-router-dom"
+import styled from 'styled-components';
+import Nav from "./Nav";
+import Footer from './Footer/Footer';
+
+const MainSelect=styled.div`
+display:flex;
+font-family: 'Playfair Display', serif;
+
+
+`
+
 
 const Select=()=>{
 const [events,setEvents]=useState(shows)
@@ -19,15 +30,16 @@ shows.filter(show=>{
 
     return(
 <>
+<Nav/>
     <select onChange={handleChange}>
 <option value="music">Music</option>
 <option value="movie">Movies</option>
     </select>
     {
-         shows.map(item=>{
+         events.map(item=>{
     return (
     
-        <div>
+        <MainSelect>
  
 
     <img src={item.img} width={"250"} />
@@ -35,16 +47,16 @@ shows.filter(show=>{
 <p>{item.des}</p>
 <p>{item.time}</p>
 <p>{item.day}</p>
-
+<p>{item.price}</p>
 
     )
     
-</div>
+</MainSelect>
 );
     }
     )
 }
-    
+    <Footer/>
     </>
     )
  

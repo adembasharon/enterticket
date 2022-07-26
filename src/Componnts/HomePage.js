@@ -4,11 +4,16 @@ import Main from "./Main";
 import Slider from "./Slider";
 import News from "./News"
 import styled from "styled-components"
-// import Select from "../Componnts/Select"
 import Footer from './Footer/Footer';
 
 const MainContainer=styled.div`
 display:flex;
+
+// Media
+@media(max-width:810px){
+flex-wrap:wrap;
+// width:100%;
+}
 
 `
 
@@ -16,19 +21,12 @@ const HomePage =()=>{
 return (
     <div>
 <Nav/>
-{/* <Select/> */}
 <Slider/>
 <MainContainer>
 <Main/>
 </MainContainer>
-
 <News/>
 <Footer/>
-
-
-
-    </div>
-)
-
-}
+</div>
+)}
 export default HomePage;

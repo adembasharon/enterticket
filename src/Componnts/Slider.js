@@ -78,7 +78,7 @@ const Slider = () => {
           </Carouser>
         </Slidecontainer>
         <Paragrap>
-        <p> To all the fun lovers purposes to get your coming event ticket from Enterticket. Enterticket we bring fun at your disposal.<Link to="/Allshow">View More Shows...</Link> </p>
+        <p> To all the fun lovers purposes to get your coming event ticket from ENTicket. ENTicket we bring fun at your disposal.<Link to="/Allshow">View More Shows...</Link> </p>
         </Paragrap>
         </>
     )

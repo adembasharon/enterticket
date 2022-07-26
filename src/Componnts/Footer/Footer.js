@@ -50,9 +50,9 @@ background-color:#393939;
 color:#fff;
 font-size:1rem;
 
-@media(max-width:768px){
+@media(max-width:810px){
 font-size:.5rem;
-
+flex-wrap:wrap;
 
 }
 
